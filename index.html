@@ -1,0 +1,68 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Birthday Alifah Ranun</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+  </head>
+  <body
+    style="
+      background-image: url(https://images.unsplash.com/photo-1628965882741-570e75becd5d?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=687);
+    "
+    class="flex justify-center h-screen items-center"
+  >
+    <div
+      class="bg-white border px-10 py-9 border-4 border-gray-300 shadow-lg shadow-blue-300 rounded-xl text-center animate__animated animate__BackInDown m-8 w-80"
+      id="kartu"
+    >
+      <h1 class="text-3xl">Happy Birthday</h1>
+      <h1
+        class="text-4xl text-brown-400 font-bold animate__animated animate__pulse animate__infinite"
+      >
+        Alifah Ranun 🎉🎊
+      </h1>
+      <button
+        class="p-2 bg-blue-500 text-white rounded mt-5 hover:bg-blue-900 transition ease-in w-full animate__animated animate__delay-1s animate__tada"
+        onclick="ubahkartu()"
+      >
+        Click Here!
+      </button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
+    <script>
+      function randomInRange(min, max) {
+        return Math.random() * (max - min) + min;
+      }
+
+      confetti({
+        angle: randomInRange(55, 125),
+        spread: randomInRange(50, 70),
+        particleCount: randomInRange(50, 100),
+        origin: { y: 0.6 },
+      });
+      let kartu = document.getElementById("kartu");
+      function ubahkartu() {
+        kartu.innerHTML = `
+        <img src="Alifah Ranun.jpg" class="w-40 h-40 rounded-full object-cover mx-auto mb-4 border-4 border-brown-500 animate__animated animate__fadein">
+        <h1 class="font-semibold text-wrap animate__animated animate__zoomin">Ranutt!, Happy Birthday yaaaaa, semoga semakin jadi anak yang rajin, berbakti kepada kedua orangtua ranut🙌
+            Makasii yee ranut laa luangkan waktunye untuk dengar yappingan ridho hehe,terus jadi anak yang periang dan selalu semangat, maaf yee baru bisaa kasih hadiah longteks ajaa hehe, tahun depan insyallah kasih lebih kok yaa😁
+            always being a positive person for everypeople, always happy & hope ur always have a nice day, glad to know u ranunn, enjoy ur happiest birthday yaaa🎉🎊</h1>
+        <h2 class="mt-3 animate__animated animate__fadein animated__delay-1s">-Dari:Ridho Winanto Guntong-</h2>
+
+        <button
+        class="p-2 bg-slate-500 text-white rounded mt-5 hover:bg-slate-900 transition ease-in w-full animate__animated animate__delay-1s animate__tada" onclick="refresh()"
+      >
+        Close
+      </button>`;
+      }
+
+      function refresh() {
+        location.reload();
+      }
+    </script>
+  </body>
+</html>
